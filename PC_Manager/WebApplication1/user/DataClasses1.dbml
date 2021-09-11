@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PC_Manager" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-T7SCL4C\SQLEXPRESS;Initial Catalog=PC_Manager;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="PC_ManagerConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.users" Member="users">
+    <Type Name="users">
+      <Column Name="uid" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="uname" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="passwd" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.staff" Member="staff">
+    <Type Name="staff">
+      <Column Name="sid" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="sname" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="passwd" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.user_login" Method="user_login">
+    <Parameter Name="uid" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="passwd" Type="System.String" DbType="NVarChar(16)" />
+    <Parameter Name="status" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.staff_login" Method="staff_login">
+    <Parameter Name="sid" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="passwd" Type="System.String" DbType="NVarChar(16)" />
+    <Parameter Name="status" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.add_user" Method="add_user">
+    <Parameter Name="uid" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="uname" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="passwd" Type="System.String" DbType="NVarChar(16)" />
+    <Parameter Name="email" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="status" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.add_staff" Method="add_staff">
+    <Parameter Name="sid" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="sname" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="passwd" Type="System.String" DbType="NVarChar(16)" />
+    <Parameter Name="email" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="status" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

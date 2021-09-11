@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="staff.master.cs" Inherits="WebApplication1.staff1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            text-align: center;
+        }
+        .auto-style2 {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+                <p class="auto-style1" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: xx-large; color: #008080">
+                    <strong>PC套装预约销售系统</strong></p>
+                <p class="auto-style1" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: large; color: #008080">
+                    <strong>
+                    <asp:Label ID="Label1" runat="server" Font-Size="Medium"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:LinkButton ID="LinkButton1" runat="server" Font-Size="Medium" OnClick="LinkButton1_Click">[注销]</asp:LinkButton>
+                    </strong></p>
+        <table class="auto-style2">
+            <tr>
+                <td class="auto-style1">
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="store.aspx">配件管理</asp:HyperLink>
+                </td>
+                
+                <td class="auto-style1">
+                    <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="proposal.aspx">配置方案</asp:HyperLink>
+                </td>
+                <td class="auto-style1">
+                    <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="order.aspx">订单查询</asp:HyperLink>
+                </td>
+            </tr>
+        </table>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
